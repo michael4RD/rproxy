@@ -8,7 +8,7 @@ Step 2: stay on the same terminal, and do "cd rproxy && make run"
 Step 3: open another terminal and type "curl localhost:8080 -v"
 
 Note if you hit errors like "listen tcp :8080: bind: address already in use",
-please do "sudo lsof -i :8080" or "sudo lsof -i : 8888", followed by "sudo kill <pid>",
+please do "sudo lsof -i :8080" or "sudo lsof -i : 8888", followed by "sudo kill [pid]",
 and redo step 2&3.
 
 # Resources: how was the implementation built upon?
