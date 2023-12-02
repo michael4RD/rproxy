@@ -1,5 +1,6 @@
 build:
 	go build -o bin/main main.go
+	go build -o bin/target target_server.go
 
 run:
 	go run target_server.go &
