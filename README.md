@@ -25,7 +25,8 @@ support advanced features yet.
 
 # How to make it scale?
 We can make the RProxy stateless to make it scalable: multiple stateless RProxy instances
-can run in parallel without maintaining state consistency in-between.
+can run in parallel (preferrably in a docker container environment) without maintaining
+state consistency in-between.
 
 We can also make the currently single target server scalable by supporting a list of target
 URLs. We can redirect incoming requests to different target servers based on rules.
