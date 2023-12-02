@@ -8,7 +8,7 @@ Step 2: stay on the same terminal, and do "cd rproxy && make run"
 Step 3: open another terminal and type "curl localhost:8080 -v"
 
 Note if you hit errors like "listen tcp :8080: bind: address already in use",
-please do "sudo lsof -i :8080" or "sudo lsof -i : 8888", followed by "sudo kill <pid>",
+please do "sudo lsof -i :8080" or "sudo lsof -i : 8888", followed by "sudo kill [pid]",
 and redo step 2&3.
 
 # Resources: how was the implementation built upon?
@@ -25,7 +25,8 @@ support advanced features yet.
 
 # How to make it scale?
 We can make the RProxy stateless to make it scalable: multiple stateless RProxy instances
-can run in parallel without maintaining state consistency in-between.
+can run in parallel (preferrably in a docker container environment) without maintaining
+state consistency in-between.
 
 We can also make the currently single target server scalable by supporting a list of target
 URLs. We can redirect incoming requests to different target servers based on rules.
